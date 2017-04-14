@@ -23,8 +23,8 @@ var config = loadConfig();
 function authenticate(code, cb) {
   var scope = ""  
   // no scope is an empty string
-  if (typeof config.scope !== "undefined"){
-      scope = config.scope;
+  if (typeof config._oauth_scope !== "undefined"){
+      scope = config.oauth_scope;
   }
   var data = qs.stringify({
     client_id: config.oauth_client_id,
